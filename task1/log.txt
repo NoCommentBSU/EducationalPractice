@@ -1,0 +1,12 @@
+PS C:\Users\MSI\Practice\task1> git log
+commit 80f562fcf6e2113677ae7fd972e991294469d93f (HEAD -> master)
+Author: Stanislav Bychkovsky <stas.nocomment.by@gmail.com>
+Date:   Tue Feb 6 18:50:44 2018 +0300
+
+    add status.txt
+
+commit 934efb1bb7258e2d70a299edfbbc44fe4e50b45f
+Author: Stanislav Bychkovsky <stas.nocomment.by@gmail.com>
+Date:   Tue Feb 6 18:43:43 2018 +0300
+
+    add .gitignore
