@@ -1,0 +1,305 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+    font-family: "Josefin Sans";
+}
+
+body {
+    margin: 0;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    min-height: 0.7vh;
+    position: relative;
+}
+
+.header {
+    height: 6.92vh;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    border: 1px solid lightgray;
+}
+
+.logo {
+    font-size: 1.9vw;
+    margin-left: 5vw;
+}
+
+.log-status-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 2.5vw;
+}
+
+.username {
+    font-size: 1.08vw;
+    margin-right: 1.52vw;
+}
+
+.log-button {
+    width: 6vw;
+    height: 3.07vh;
+    color: black;
+    background-color: white;
+    font-size: 0.9vw;
+    border: 1px solid black;
+    transition-duration: 0.7s;
+}
+
+.log-button:hover {
+    color: white;
+    background-color: black;
+}
+
+.log-button:active {
+    padding-top: 0.7vh;
+    border: 2px inset gray;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    margin: 3.62vh 2.5vw 5.2vh 5vw;
+    justify-content: space-between;
+}
+
+.main-content {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    /*overflow: auto;*/
+}
+
+.pictures {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 75vw;
+}
+
+.pictures > a > img {
+    border: 1px outset black;
+    height: 36.2vh;
+    width: 13vw;
+    margin-bottom: 4vh;
+}
+
+.pictures > a > img:hover {
+    border: 2px outset black;
+}
+
+.pictures > a > img:active {
+    border: 3px inset gray;
+}
+
+.modal-window {
+    position: fixed;
+    display: flex;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.7);
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.4s ease-in;
+    pointer-events: none;
+}
+
+.modal-window:target {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.window-content {
+    height: 60vh;
+    width: 70vw;
+    display: flex;
+    position: relative;
+    margin: 15vh 17.5vw 30vh 13vw;
+    background-color: white;
+}
+
+.window-content > img {
+    width: 30vw;
+    border: 1px solid gray;
+}
+
+.photo-options-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.upload-date {
+    height: 8vh;
+    width: 40vw;
+    font-size: 1.3vw;
+    background-color: lightgray;
+    border: 1px solid gray;
+    padding-top: 2.7vh;
+    padding-left: 2vw;
+}
+
+.photo-description {
+    height: 30vh;
+    font-size: 1.2vw;
+    padding-top: 1.2vh;
+    padding-left: 0.6vw;
+    border: 1px solid lightgray;
+}
+
+.hashtags-info {
+    height: 17vh;
+    padding-top: 1.2vh;
+    padding-left: 0.6vw;
+    border: 1px solid lightgray;
+}
+
+.control-buttons-wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+.control-buttons-wrapper > button {
+    height: 6vh;
+    width: 13.34vw;
+    font-size: 1vw;
+    background: #1aa3ff;
+    border: 1px solid black;
+}
+
+.control-buttons-wrapper > button:active {
+    padding-top: 0.5vw;
+    border: 2px inset gray;
+}
+
+.close {
+    color: black;
+    position: fixed;
+    top: 15.5vh;
+    right: 16.5vw;
+    left: 82vw;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1vw;
+}
+
+.load-button {
+    height: 3.7vh;
+    align-self: center;
+    color: black;
+    background-color: white;
+    font-size: 1.1vw;
+    border: 1px solid black;
+    transition-duration: 0.7s;
+}
+
+.load-button:hover {
+    width: 75vw;
+    color: white;
+    transition-duration: 0.7s;
+    background-color: black;
+}
+
+.load-button:active {
+    padding-top: 0.8vh;
+    border: 2px inset gray;
+}
+
+.main-options {
+    height: auto;
+    width: 13.4vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.filters-wrapper {
+    width: inherit;
+    display: flex;
+    flex-direction: column;
+    font-size: 0.9vw;
+}
+
+.filter-button {
+    height: 6.2vh;
+    background-color: white;
+    color: black;
+    font-size: 0.9vw;
+    transition-duration: 0.5s;
+    border: 1px outset black;
+}
+
+.filter-button:hover {
+    background-color: #1aa3ff;
+}
+
+.filter-button:active {
+    border: 3px inset gray;
+    padding-top: 1vh;
+}
+
+.filter-options > input {
+    margin-top: 0.5vw;
+    font-size: inherit;
+}
+
+.filter-options > input[type=text] {
+    width: 13.4vw;
+}
+
+.filter-options > select {
+    width: 13.4vw;
+    font-size: 0.7vw;
+    -webkit-appearance: none;
+}
+
+.add-photo-button {
+    height: 6.2vh;
+    width: 13.4vw;
+    background-color: white;
+    color: black;
+    font-size: 0.9vw;
+    transition-duration: 0.5s;
+    border: 1px outset black;
+    align-self: center;
+    margin-bottom: 20.2vh;
+}
+
+.add-photo-button:hover {
+    height: 24.2vh;
+    width: 12vw;
+    margin-top: 20.2vh;
+    margin-bottom: 12.2vh;
+    padding-bottom: 18.2vh;
+    color: black;
+    background-color: black;
+    background: url(new-photo.png) no-repeat center;
+    background-size: 12vw 24.2vh;
+}
+
+.add-photo-button:active {
+    padding-top: 1vh;
+    border: 3px inset gray;
+}
+
+.footer {
+    height: 7.22vh;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    align-content: center;
+    font-size: 0.6vw;
+    font-weight: 100;
+    border: 1px solid lightgray;
+}
+
+.footer > span {
+    margin: auto;
+}
