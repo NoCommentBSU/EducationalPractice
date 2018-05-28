@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 (function () {
     let photoPosts = [
@@ -11,7 +11,6 @@
             hashTags: ['#sampleTag1', '#sampleTag2', '#sampleTag3'],
             likes: ['user1', 'user2']
         },
-
         {
             id: '2',
             description: 'sample description 2',
@@ -21,7 +20,6 @@
             hashTags: ['#sampleTag1', '#sampleTag2', '#sampleTag3'],
             likes: ['user1', 'user2', 'user3']
         },
-
         {
             id: '3',
             description: 'sample description 3',
@@ -31,7 +29,6 @@
             hashTags: ['#sampleTag1', '#sampleTag2', '#sampleTag3'],
             likes: ['user1', 'user2', 'user3']
         },
-
         {
             id: '4',
             description: 'sample description 4',
@@ -41,7 +38,6 @@
             hashTags: ['#sampleTag1', '#sampleTag2', '#sampleTag3'],
             likes: ['user1']
         },
-
         {
             id: '5',
             description: 'sample description 5',
@@ -51,7 +47,6 @@
             hashTags: ['#sampleTag1', '#sampleTag2', '#sampleTag3'],
             likes: ['user1', 'user2', 'user3']
         },
-
         {
             id: '6',
             description: 'sample description 6',
@@ -61,7 +56,6 @@
             hashTags: ['#sampleTag1', '#sampleTag2', '#sampleTag3'],
             likes: ['user1', 'user2', 'user3']
         },
-
         {
             id: '7',
             description: 'sample description 7',
@@ -71,7 +65,6 @@
             hashTags: ['#sampleTag1', '#sampleTag2', '#sampleTag3'],
             likes: ['user2']
         },
-
         {
             id: '8',
             description: 'sample description 8',
@@ -81,7 +74,6 @@
             hashTags: ['#sampleTag1', '#sampleTag2', '#sampleTag3'],
             likes: ['user1', 'user2', 'user3']
         },
-
         {
             id: '9',
             description: 'sample description 9',
@@ -91,7 +83,6 @@
             hashTags: ['#sampleTag1', '#sampleTag2', '#sampleTag3'],
             likes: ['user1', 'user2', 'user3']
         },
-
         {
             id: '10',
             description: 'sample description 10',
@@ -101,7 +92,6 @@
             hashTags: ['#sampleTag1', '#sampleTag2', '#sampleTag3'],
             likes: ['user2', 'user3']
         },
-
         {
             id: '11',
             description: 'sample description 11',
@@ -111,7 +101,6 @@
             hashTags: ['#sampleTag1', '#sampleTag2', '#sampleTag3'],
             likes: ['user1', 'user2']
         },
-
         {
             id: '12',
             description: 'sample description 12',
@@ -121,7 +110,6 @@
             hashTags: ['#sampleTag1', '#sampleTag2', '#sampleTag3'],
             likes: ['user1', 'user2', 'user3']
         },
-
         {
             id: '13',
             description: 'sample description 13',
@@ -131,7 +119,6 @@
             hashTags: ['#sampleTag1', '#sampleTag2', '#sampleTag3'],
             likes: ['user1', 'user2']
         },
-
         {
             id: '14',
             description: 'sample description 14',
@@ -141,7 +128,6 @@
             hashTags: ['#sampleTag1', '#sampleTag2', '#sampleTag3'],
             likes: ['user2', 'user3']
         },
-
         {
             id: '15',
             description: 'sample description 15',
@@ -151,7 +137,6 @@
             hashTags: ['#sampleTag1', '#sampleTag2', '#sampleTag3'],
             likes: ['user3']
         },
-
         {
             id: '16',
             description: 'sample description 16',
@@ -161,7 +146,6 @@
             hashTags: ['#sampleTag1', '#sampleTag2', '#sampleTag3'],
             likes: ['user1', 'user2']
         },
-
         {
             id: '17',
             description: 'sample description 17',
@@ -171,7 +155,6 @@
             hashTags: ['#sampleTag1', '#sampleTag2', '#sampleTag3'],
             likes: ['user1', 'user2', 'user4']
         },
-
         {
             id: '18',
             description: 'sample description 18',
@@ -181,7 +164,6 @@
             hashTags: ['#sampleTag1', '#sampleTag2', '#sampleTag3'],
             likes: ['user1', 'user5']
         },
-
         {
             id: '19',
             description: 'sample description 19',
@@ -191,7 +173,6 @@
             hashTags: ['#sampleTag1', '#sampleTag2', '#sampleTag3'],
             likes: ['user1', 'user2', 'user3']
         },
-
         {
             id: '20',
             description: 'sample description 20',
@@ -279,7 +260,7 @@
 
     function addPhotoPost(photoPost) {
         if (!validatePhotoPost(photoPost) ||
-            (getPhotoPost(photoPost.id)) === photoPost) {//id должен быть уникальным
+            (getPhotoPost(photoPost.id) !== undefined)) {//id должен быть уникальным
             return false;
         }
         photoPosts.push(photoPost);
