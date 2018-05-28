@@ -303,3 +303,13 @@ main {
 .footer > span {
     margin: auto;
 }
+
+@media only screen and (max-width: 600px) {
+    main {
+        flex-direction: column;
+    }
+    .main-options {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
